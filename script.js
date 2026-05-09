@@ -32,7 +32,7 @@ async function scrape() {
   document.getElementById("stats").classList.add("hidden");
 
   try {
-    const res = await fetch("http://ORACLE_IP:3001/scrape", {
+    const res = await fetch("http://3.92.217.45:3001/scrape", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ url })
@@ -187,7 +187,7 @@ async function downloadZip() {
   }, 3500); 
 
   try {
-    const res = await fetch("http://ORACLE_IP:3001/download", {
+    const res = await fetch("http://3.92.217.45:3001/download", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ images: selectedImages })
